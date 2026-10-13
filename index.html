@@ -9,23 +9,23 @@
 
 <style>
 :root {
---top: #121416;
---teal: #009d9b;
---muted: #727782;
---bar: 64px;
---nav: 201px;
+  --top: #121416;
+  --teal: #009d9b;
+  --muted: #727782;
+  --bar: 64px;
+  --nav: 201px;
 }
 
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-margin: 0;
-min-height: 100%;
-font-family: Arial, Helvetica, sans-serif;
-color: #121212;
-font-size: 13px;
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #121212;
+  font-size: 13px;
 }
 
 body { background: #f5f5f5; }
@@ -36,350 +36,350 @@ a { color: inherit; text-decoration: none; }
 /* DEMO INDICATOR */
 
 .demo-banner {
-position: fixed;
-bottom: 14px;
-left: 14px;
-z-index: 30;
-background: white;
-border: 1px solid #cbd5d5;
-border-radius: 5px;
-padding: 8px 11px;
-box-shadow: 0 3px 16px #0002;
-color: #236260;
-font-size: 11px;
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+  z-index: 30;
+  background: white;
+  border: 1px solid #cbd5d5;
+  border-radius: 5px;
+  padding: 8px 11px;
+  box-shadow: 0 3px 16px #0002;
+  color: #236260;
+  font-size: 11px;
 }
 
 /* TOP NAVIGATION */
 
 .top {
-height: var(--bar);
-background: var(--top);
-display: flex;
-align-items: center;
-gap: 26px;
-padding: 0 21px;
-color: white;
-white-space: nowrap;
+  height: var(--bar);
+  background: var(--top);
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 0 21px;
+  color: white;
+  white-space: nowrap;
 }
 
 .launcher {
-width: 62px;
-height: 35px;
-background: #303335;
-border-radius: 19px;
-display: flex;
-align-items: center;
-justify-content: space-around;
+  width: 62px;
+  height: 35px;
+  background: #303335;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .grid-dots {
-width: 17px;
-display: grid;
-grid-template-columns: repeat(3, 4px);
-gap: 2px;
+  width: 17px;
+  display: grid;
+  grid-template-columns: repeat(3, 4px);
+  gap: 2px;
 }
 
 .grid-dots i {
-width: 4px;
-height: 4px;
-background: white;
-border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
 }
 
 .avatar {
-height: 27px;
-width: 27px;
-border-radius: 50%;
-background: #00a8a7;
-display: grid;
-place-items: center;
-font-weight: bold;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+  background: #00a8a7;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
 }
 
 .brand {
-font-size: 16px;
-font-weight: 700;
-letter-spacing: -.3px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.3px;
 }
 
 .brand-mark {
-font-size: 25px;
-margin-right: 3px;
-text-shadow:
--1px -1px #25f4ee,
-1px 1px #fe2c55;
+  font-size: 25px;
+  margin-right: 3px;
+  text-shadow:
+    -1px -1px #25f4ee,
+    1px 1px #fe2c55;
 }
 
 .tabs {
-display: flex;
-align-items: center;
-gap: 24px;
-height: 100%;
-margin-left: 9px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 100%;
+  margin-left: 9px;
 }
 
 .tabs button {
-position: relative;
-border: 0;
-background: none;
-color: #a3a9b1;
-font-size: 15px;
-padding: 0;
+  position: relative;
+  border: 0;
+  background: none;
+  color: #a3a9b1;
+  font-size: 15px;
+  padding: 0;
 }
 
 .tabs button.active { color: white; }
 
 .tabs button.active::after {
-content: "";
-position: absolute;
-height: 2px;
-background: #00b9b5;
-bottom: -9px;
-left: 0;
-right: 0;
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #00b9b5;
+  bottom: -9px;
+  left: 0;
+  right: 0;
 }
 
 .actions {
-margin-left: auto;
-display: flex;
-align-items: center;
-gap: 22px;
-color: #9ea4a9;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: #9ea4a9;
 }
 
 .actions svg {
-width: 20px;
-height: 20px;
-stroke: currentColor;
-fill: none;
-stroke-width: 1.9;
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.9;
 }
 
 .bell { position: relative; }
 
 .bell::after {
-content: "1";
-position: absolute;
-right: -6px;
-top: -8px;
-background: #f3494b;
-color: white;
-font-size: 10px;
-border-radius: 50%;
-width: 15px;
-height: 15px;
-display: grid;
-place-items: center;
+  content: "1";
+  position: absolute;
+  right: -6px;
+  top: -8px;
+  background: #f3494b;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
 }
 
 .account {
-color: white;
-border: 1px solid #767c81;
-border-radius: 4px;
-height: 35px;
-width: 184px;
-padding: 0 11px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: transparent;
-font-size: 12px;
+  color: white;
+  border: 1px solid #767c81;
+  border-radius: 4px;
+  height: 35px;
+  width: 184px;
+  padding: 0 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  font-size: 12px;
 }
 
 .top-end {
-font-size: 22px;
-color: #8dc9c6;
+  font-size: 22px;
+  color: #8dc9c6;
 }
 
 /* DASHBOARD LAYOUT */
 
 .layout {
-display: flex;
-min-height: calc(100vh - var(--bar));
-background: #f5f5f5;
+  display: flex;
+  min-height: calc(100vh - var(--bar));
+  background: #f5f5f5;
 }
 
 .sidebar {
-width: var(--nav);
-flex: 0 0 var(--nav);
-background: white;
-padding: 8px 7px 20px;
+  width: var(--nav);
+  flex: 0 0 var(--nav);
+  background: white;
+  padding: 8px 7px 20px;
 }
 
 .sideitem {
-min-height: 41px;
-display: flex;
-align-items: center;
-gap: 10px;
-padding: 0 19px;
-font-weight: 600;
-white-space: nowrap;
+  min-height: 41px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 19px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .sideitem svg {
-width: 14px;
-height: 14px;
-stroke: currentColor;
-fill: none;
-stroke-width: 1.7;
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
 }
 
 .sideitem.billing { color: #009b9a; }
 
 .subitem {
-height: 41px;
-padding-left: 25px;
-display: flex;
-align-items: center;
-gap: 8px;
-white-space: nowrap;
+  height: 41px;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 .subitem::before {
-content: "•";
-color: #51b640;
-font-size: 12px;
+  content: "•";
+  color: #51b640;
+  font-size: 12px;
 }
 
 .subitem.active {
-background: #effafa;
-border-radius: 3px;
-color: #008a8c;
+  background: #effafa;
+  border-radius: 3px;
+  color: #008a8c;
 }
 
 .main {
-flex: 1;
-min-width: 0;
-padding: 0 21px 14px 11px;
+  flex: 1;
+  min-width: 0;
+  padding: 0 21px 14px 11px;
 }
 
 .heading {
-min-height: 84px;
-padding-top: 16px;
+  min-height: 84px;
+  padding-top: 16px;
 }
 
 .heading h1 {
-margin: 0 0 15px;
-font-size: 16px;
-font-weight: 600;
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .heading p {
-margin: 0;
-color: #717987;
-font-size: 12px;
-line-height: 1.5;
+  margin: 0;
+  color: #717987;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 /* PAYMENT CONTENT */
 
 .canvas {
-background: white;
-min-height: calc(100vh - 162px);
-border-radius: 3px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 32px 15px;
+  background: white;
+  min-height: calc(100vh - 162px);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 15px;
 }
 
 .empty {
-width: 457px;
-max-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-transform: translateY(7px);
+  width: 457px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: translateY(7px);
 }
 
 .illustration {
-width: 112px;
-height: 95px;
-margin-bottom: 16px;
+  width: 112px;
+  height: 95px;
+  margin-bottom: 16px;
 }
 
 .empty h2 {
-font-size: 16px;
-font-weight: 600;
-margin: 0 0 17px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 17px;
 }
 
 /* FAQ */
 
 .faq {
-width: 100%;
-background: #f8f8fa;
-border-radius: 4px;
-padding: 11px 23px;
-text-align: left;
+  width: 100%;
+  background: #f8f8fa;
+  border-radius: 4px;
+  padding: 11px 23px;
+  text-align: left;
 }
 
 .faq details {
-padding: 6px 0;
-font-size: 13px;
-font-weight: 600;
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .faq summary {
-cursor: pointer;
-list-style: none;
+  cursor: pointer;
+  list-style: none;
 }
 
 .faq summary::before {
-content: "⌄";
-font-weight: 400;
-margin-right: 9px;
+  content: "⌄";
+  font-weight: 400;
+  margin-right: 9px;
 }
 
 .faq details[open] summary::before {
-content: "⌃";
+  content: "⌃";
 }
 
 .faq details p {
-font-weight: 400;
-color: #60646a;
-line-height: 1.5;
-padding-left: 16px;
+  font-weight: 400;
+  color: #60646a;
+  line-height: 1.5;
+  padding-left: 16px;
 }
 
 /* ADD PAYMENT */
 
 .add {
-background: #009c9a;
-border: 0;
-border-radius: 3px;
-color: white;
-height: 32px;
-padding: 0 16px;
-margin-top: 21px;
-font-size: 12px;
-font-weight: 600;
+  background: #009c9a;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  height: 32px;
+  padding: 0 16px;
+  margin-top: 21px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .add:hover { background: #008a87; }
 
 .disclaimer {
-font-size: 13px;
-line-height: 1.4;
-color: #777;
-margin: 23px 0 0;
-max-width: 440px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #777;
+  margin: 23px 0 0;
+  max-width: 440px;
 }
 
 .text-link {
-color: #009c9a;
-font-weight: 600;
-border: 0;
-background: transparent;
-padding: 0;
+  color: #009c9a;
+  font-weight: 600;
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .notice {
-display: none;
-font-size: 12px;
-color: #007b78;
-margin-top: 12px;
+  display: none;
+  font-size: 12px;
+  color: #007b78;
+  margin-top: 12px;
 }
 
 .notice.show { display: block; }
@@ -387,161 +387,161 @@ margin-top: 12px;
 /* FLOATING HELP */
 
 .floating {
-position: fixed;
-right: 21px;
-bottom: 133px;
-width: 44px;
-height: 44px;
-border: 0;
-color: white;
-background: linear-gradient(135deg, #b8b3e9, #07abb5);
-border-radius: 50%;
-font-size: 30px;
+  position: fixed;
+  right: 21px;
+  bottom: 133px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  color: white;
+  background: linear-gradient(135deg, #b8b3e9, #07abb5);
+  border-radius: 50%;
+  font-size: 30px;
 }
 
 .fake-scroll {
-position: fixed;
-top: 79px;
-bottom: 76px;
-right: 14px;
-width: 7px;
-background: #d3d3d3;
-border-radius: 10px;
-pointer-events: none;
+  position: fixed;
+  top: 79px;
+  bottom: 76px;
+  right: 14px;
+  width: 7px;
+  background: #d3d3d3;
+  border-radius: 10px;
+  pointer-events: none;
 }
 
 /* MODAL */
 
 .payment-overlay {
-position: fixed;
-inset: 0;
-background: rgba(0, 0, 0, .52);
-z-index: 9999;
-display: none;
-align-items: center;
-justify-content: center;
-padding: 16px;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .52);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 .payment-overlay.show { display: flex; }
 
 .payment-modal {
-width: min(860px, 100%);
-max-height: calc(100vh - 32px);
-overflow-y: auto;
-background: white;
-color: #333;
-border-radius: 4px;
-box-shadow: 0 15px 60px #0003;
+  width: min(860px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  background: white;
+  color: #333;
+  border-radius: 4px;
+  box-shadow: 0 15px 60px #0003;
 }
 
 .payment-modal-head {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 27px 32px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 27px 32px 12px;
 }
 
 .payment-modal-head h2 {
-font-size: 16px;
-margin: 0;
-font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
 }
 
 .payment-close {
-border: 0;
-background: none;
-font-size: 22px;
-color: #333;
+  border: 0;
+  background: none;
+  font-size: 22px;
+  color: #333;
 }
 
 .payment-modal-body { padding: 0 32px 47px; }
 
 .payment-secure {
-color: #008b42;
-font-size: 13px;
-font-weight: 600;
-margin: 7px 0 19px;
+  color: #008b42;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 7px 0 19px;
 }
 
 .payment-description {
-font-size: 14px;
-line-height: 1.6;
-margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px;
 }
 
 .payment-highlight {
-color: #6857ef;
-background: #f3f0ff;
-padding: 4px 7px;
-border-radius: 4px;
-font-weight: 600;
-white-space: nowrap;
+  color: #6857ef;
+  background: #f3f0ff;
+  padding: 4px 7px;
+  border-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 /* CARD DROPDOWN */
 
 .card-option {
-border: 1px solid #eee;
-border-radius: 4px;
-overflow: hidden;
-background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fafafa;
 }
 
 .card-option.expanded {
-border-color: #00aaa8;
-background: white;
+  border-color: #00aaa8;
+  background: white;
 }
 
 .card-option-header {
-width: 100%;
-height: 66px;
-display: flex;
-align-items: center;
-gap: 16px;
-padding: 0 24px;
-border: 0;
-background: #fafafa;
-text-align: left;
-color: #333;
+  width: 100%;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  border: 0;
+  background: #fafafa;
+  text-align: left;
+  color: #333;
 }
 
 .card-option-header strong {
-font-size: 14px;
-font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .radio-indicator {
-width: 15px;
-height: 15px;
-border: 2px solid #dce1e6;
-border-radius: 50%;
-flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #dce1e6;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .card-option.expanded .radio-indicator {
-border: 5px solid #111;
+  border: 5px solid #111;
 }
 
 .card-icon {
-width: 40px;
-height: 27px;
-background: #f0f0f0;
-display: grid;
-place-items: center;
-font-size: 23px;
-color: #aeb3b7;
-border-radius: 2px;
+  width: 40px;
+  height: 27px;
+  background: #f0f0f0;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  color: #aeb3b7;
+  border-radius: 2px;
 }
 
 /* FOUR FILLABLE FIELDS */
 
 .card-details {
-padding: 28px 58px 44px;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 22px 20px;
-background: white;
+  padding: 28px 58px 44px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 20px;
+  background: white;
 }
 
 .card-details[hidden] { display: none; }
@@ -549,90 +549,90 @@ background: white;
 .mock-field.full-width { grid-column: 1 / -1; }
 
 .mock-field-head {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .mock-label {
-display: block;
-margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .mock-field-head,
 .mock-label {
-color: #647084;
-font-size: 14px;
+  color: #647084;
+  font-size: 14px;
 }
 
 .mock-card-logos {
-display: flex;
-gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .mock-card-logos span {
-background: #f0f0f0;
-padding: 5px 7px;
-border-radius: 2px;
-font-size: 9px;
-color: #808080;
-font-weight: 700;
+  background: #f0f0f0;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-size: 9px;
+  color: #808080;
+  font-weight: 700;
 }
 
 .mock-card-logos img {
-width: 35px;
-height: 24px;
-object-fit: contain;
-display: block;
+  width: 35px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 
 .mock-input {
-display: block;
-width: 100%;
-height: 37px;
-padding: 0 12px;
-background: #f1f2f4;
-border: 1px solid transparent;
-border-radius: 2px;
-color: #333;
-font-size: 14px;
-outline: none;
+  display: block;
+  width: 100%;
+  height: 37px;
+  padding: 0 12px;
+  background: #f1f2f4;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #333;
+  font-size: 14px;
+  outline: none;
 }
 
 .mock-input::placeholder { color: #8994a4; }
 
 .mock-input:focus {
-background: white;
-border-color: #00aaa8;
+  background: white;
+  border-color: #00aaa8;
 }
 
 /* PRIVACY AND VALIDATION */
 
 .privacy-note {
-grid-column: 1 / -1;
-color: #687781;
-font-size: 12px;
-line-height: 1.5;
+  grid-column: 1 / -1;
+  color: #687781;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .privacy-note label {
-display: flex;
-align-items: flex-start;
-gap: 9px;
-cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  cursor: pointer;
 }
 
 .privacy-note input {
-margin-top: 2px;
-accent-color: #009d9b;
+  margin-top: 2px;
+  accent-color: #009d9b;
 }
 
 .form-status {
-display: none;
-font-size: 12px;
-line-height: 1.5;
-margin: 15px 0 0;
+  display: none;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 15px 0 0;
 }
 
 .form-status.show { display: block; }
@@ -642,85 +642,85 @@ margin: 15px 0 0;
 /* MODAL FOOTER */
 
 .payment-modal-foot {
-display: flex;
-justify-content: flex-end;
-gap: 8px;
-border-top: 1px solid #e5e7eb;
-padding: 24px 32px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid #e5e7eb;
+  padding: 24px 32px;
 }
 
 .payment-back,
 .payment-submit {
-height: 34px;
-padding: 0 17px;
-border: 0;
-border-radius: 4px;
-font-size: 13px;
+  height: 34px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 13px;
 }
 
 .payment-back {
-background: #f2f2f2;
-color: #222;
+  background: #f2f2f2;
+  color: #222;
 }
 
 .payment-submit {
-background: #009d9b;
-color: white;
-font-weight: 600;
+  background: #009d9b;
+  color: white;
+  font-weight: 600;
 }
 
 .payment-submit:disabled {
-background: #c3e9e7;
-cursor: not-allowed;
+  background: #c3e9e7;
+  cursor: not-allowed;
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 1250px) {
-.top { gap: 14px; }
-.tabs { gap: 14px; margin-left: 0; }
-.actions { gap: 12px; }
-.account { width: 145px; }
+  .top { gap: 14px; }
+  .tabs { gap: 14px; margin-left: 0; }
+  .actions { gap: 12px; }
+  .account { width: 145px; }
 }
 
 @media (max-width: 990px) {
-.top { overflow-x: auto; }
-.layout { min-width: 700px; }
-.fake-scroll { display: none; }
+  .top { overflow-x: auto; }
+  .layout { min-width: 700px; }
+  .fake-scroll { display: none; }
 }
 
 @media (max-width: 740px) {
-.layout { min-width: 0; }
-.sidebar { width: 145px; flex-basis: 145px; }
-.sideitem { padding: 0 7px; font-size: 11px; gap: 5px; }
-.subitem { padding-left: 13px; font-size: 11px; }
-.main { padding-right: 9px; }
-.heading { height: auto; padding: 16px 0; }
-.heading p { font-size: 11px; }
-.canvas { min-height: 580px; }
-.empty h2 { font-size: 14px; }
-.faq { padding: 9px; }
-.faq details { font-size: 11px; }
-.floating { display: none; }
+  .layout { min-width: 0; }
+  .sidebar { width: 145px; flex-basis: 145px; }
+  .sideitem { padding: 0 7px; font-size: 11px; gap: 5px; }
+  .subitem { padding-left: 13px; font-size: 11px; }
+  .main { padding-right: 9px; }
+  .heading { height: auto; padding: 16px 0; }
+  .heading p { font-size: 11px; }
+  .canvas { min-height: 580px; }
+  .empty h2 { font-size: 14px; }
+  .faq { padding: 9px; }
+  .faq details { font-size: 11px; }
+  .floating { display: none; }
 }
 
 @media (max-width: 600px) {
-.payment-modal-head { padding: 19px 18px 10px; }
-.payment-modal-body { padding: 0 18px 24px; }
-.payment-modal-foot { padding: 16px 18px; }
+  .payment-modal-head { padding: 19px 18px 10px; }
+  .payment-modal-body { padding: 0 18px 24px; }
+  .payment-modal-foot { padding: 16px 18px; }
 
-.card-details {
-padding: 22px 16px 28px;
-grid-template-columns: 1fr;
-gap: 16px;
-}
+  .card-details {
+    padding: 22px 16px 28px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 
-.mock-field.full-width,
-.privacy-note {
-grid-column: 1;
-}
+  .mock-field.full-width,
+  .privacy-note {
+    grid-column: 1;
+  }
 
-.card-option-header { padding: 0 16px; }
+  .card-option-header { padding: 0 16px; }
 }
 </style>
 </head>
@@ -731,315 +731,315 @@ grid-column: 1;
 
 <header class="top">
 
-<div class="launcher" aria-hidden="true">
-<div class="grid-dots">
-<i></i><i></i><i></i>
-<i></i><i></i><i></i>
-<i></i><i></i><i></i>
-</div>
-<div class="avatar">R</div>
-</div>
+  <div class="launcher" aria-hidden="true">
+    <div class="grid-dots">
+      <i></i><i></i><i></i>
+      <i></i><i></i><i></i>
+      <i></i><i></i><i></i>
+    </div>
+    <div class="avatar">R</div>
+  </div>
 
-<div class="brand">
-<span class="brand-mark">♪</span>
-TikTok Ads Manager
-</div>
+  <div class="brand">
+    <span class="brand-mark">♪</span>
+    TikTok Ads Manager
+  </div>
 
-<nav class="tabs">
-<button type="button">Dashboard</button>
-<button type="button">Campaigns</button>
-<button class="active" type="button">Tools</button>
-<button type="button">Analytics</button>
-<button type="button">GMV Max</button>
-</nav>
+  <nav class="tabs">
+    <button type="button">Dashboard</button>
+    <button type="button">Campaigns</button>
+    <button class="active" type="button">Tools</button>
+    <button type="button">Analytics</button>
+    <button type="button">GMV Max</button>
+  </nav>
 
-<div class="actions" aria-hidden="true">
-<svg viewBox="0 0 24 24">
-<circle cx="10" cy="10" r="7"/>
-<path d="m15 15 6 6"/>
-</svg>
+  <div class="actions" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <circle cx="10" cy="10" r="7"/>
+      <path d="m15 15 6 6"/>
+    </svg>
 
-<span class="bell">
-<svg viewBox="0 0 24 24">
-<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
-</svg>
-</span>
+    <span class="bell">
+      <svg viewBox="0 0 24 24">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
+      </svg>
+    </span>
 
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="9"/>
-<path d="M9 9a3 3 0 1 1 5 2c-1 1-2 1-2 4M12 18v1"/>
-</svg>
-</div>
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9 9a3 3 0 1 1 5 2c-1 1-2 1-2 4M12 18v1"/>
+    </svg>
+  </div>
 
-<button class="account" type="button">
-Roots of The Cosmos_adv <span>⌄</span>
-</button>
+  <button class="account" type="button">
+    Roots of The Cosmos_adv <span>⌄</span>
+  </button>
 
-<span class="top-end">▣</span>
+  <span class="top-end">▣</span>
 </header>
 
 <!-- DASHBOARD -->
 
 <div class="layout">
 
-<aside class="sidebar">
+  <aside class="sidebar">
 
-<div class="sideitem">
-<svg viewBox="0 0 24 24">
-<rect x="3" y="5" width="18" height="14"/>
-<circle cx="9" cy="11" r="2"/>
-<path d="M6 16c1-3 5-3 6 0M15 9h4"/>
-</svg>
-Account Setup
-</div>
+    <div class="sideitem">
+      <svg viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14"/>
+        <circle cx="9" cy="11" r="2"/>
+        <path d="M6 16c1-3 5-3 6 0M15 9h4"/>
+      </svg>
+      Account Setup
+    </div>
 
-<div class="sideitem">
-<svg viewBox="0 0 24 24">
-<rect x="5" y="2" width="14" height="20"/>
-<path d="M9 6h6M9 10h6"/>
-</svg>
-Documents
-</div>
+    <div class="sideitem">
+      <svg viewBox="0 0 24 24">
+        <rect x="5" y="2" width="14" height="20"/>
+        <path d="M9 6h6M9 10h6"/>
+      </svg>
+      Documents
+    </div>
 
-<div class="sideitem billing">
-<svg viewBox="0 0 24 24">
-<rect x="4" y="6" width="14" height="13"/>
-<path d="M8 3h12v9"/>
-</svg>
-Billing
-</div>
+    <div class="sideitem billing">
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="6" width="14" height="13"/>
+        <path d="M8 3h12v9"/>
+      </svg>
+      Billing
+    </div>
 
-<div class="subitem active">Payment</div>
-<div class="subitem">Promotions</div>
-<div class="subitem">Invoices</div>
-<div class="subitem">Transactions</div>
+    <div class="subitem active">Payment</div>
+    <div class="subitem">Promotions</div>
+    <div class="subitem">Invoices</div>
+    <div class="subitem">Transactions</div>
 
-<div class="sideitem">◎ &nbsp;Audience controls</div>
-<div class="sideitem">⬡ &nbsp;Ad review center</div>
-<div class="sideitem">⛨ &nbsp;Brand safety hub</div>
-<div class="sideitem">♧ &nbsp;Account health</div>
-<div class="sideitem">▣ &nbsp;Customer review</div>
-</aside>
+    <div class="sideitem">◎ &nbsp;Audience controls</div>
+    <div class="sideitem">⬡ &nbsp;Ad review center</div>
+    <div class="sideitem">⛨ &nbsp;Brand safety hub</div>
+    <div class="sideitem">♧ &nbsp;Account health</div>
+    <div class="sideitem">▣ &nbsp;Customer review</div>
+  </aside>
 
-<main class="main">
+  <main class="main">
 
-<div class="heading">
-<h1>Automatic Payment</h1>
-</div>
+    <div class="heading">
+      <h1>Automatic Payment</h1>
+    </div>
 
-<section class="canvas">
-<div class="empty">
+    <section class="canvas">
+      <div class="empty">
 
-<!-- PAYMENT ILLUSTRATION -->
+        <!-- PAYMENT ILLUSTRATION -->
 
-<svg class="illustration"
-viewBox="0 0 112 95"
-aria-label="Payment illustration"
-role="img">
-<rect x="18" y="4" width="79" height="49"
-rx="7" fill="#5ad1cc"/>
-<rect x="68" y="13" width="21" height="10"
-fill="#fff0c2"/>
-<rect x="34" y="29" width="45" height="22"
-fill="#fff"/>
-<rect x="38" y="33" width="39" height="17"
-fill="#156d84"/>
-<path d="M40 40h35l9 34H31z"
-fill="#ff8292"/>
-<rect x="45" y="42" width="25" height="12"
-rx="6" fill="#ffedc0"/>
-<path d="M34 66h12M67 66h15"
-stroke="#fff0d9"
-stroke-width="5"
-stroke-linecap="round"/>
-<circle cx="24" cy="77" r="7" fill="#18e6d6"/>
-<circle cx="95" cy="64" r="4" fill="#ff8b9a"/>
-<circle cx="87" cy="81" r="4" fill="#fff"/>
-</svg>
+        <svg class="illustration"
+             viewBox="0 0 112 95"
+             aria-label="Payment illustration"
+             role="img">
+          <rect x="18" y="4" width="79" height="49"
+                rx="7" fill="#5ad1cc"/>
+          <rect x="68" y="13" width="21" height="10"
+                fill="#fff0c2"/>
+          <rect x="34" y="29" width="45" height="22"
+                fill="#fff"/>
+          <rect x="38" y="33" width="39" height="17"
+                fill="#156d84"/>
+          <path d="M40 40h35l9 34H31z"
+                fill="#ff8292"/>
+          <rect x="45" y="42" width="25" height="12"
+                rx="6" fill="#ffedc0"/>
+          <path d="M34 66h12M67 66h15"
+                stroke="#fff0d9"
+                stroke-width="5"
+                stroke-linecap="round"/>
+          <circle cx="24" cy="77" r="7" fill="#18e6d6"/>
+          <circle cx="95" cy="64" r="4" fill="#ff8b9a"/>
+          <circle cx="87" cy="81" r="4" fill="#fff"/>
+        </svg>
 
-<h2>
-You have not added any payment method yet
-</h2>
+        <h2>
+          You have not added any payment method yet
+        </h2>
 
-<button class="add" id="payment" type="button">
-＋ Add Payment Method
-</button>
+        <button class="add" id="payment" type="button">
+          ＋ Add Payment Method
+        </button>
 
-<p class="notice" id="notice" role="status"></p>
+        <p class="notice" id="notice" role="status"></p>
 
-</div>
-</section>
+      </div>
+    </section>
 
-</main>
+  </main>
 </div>
 
 <button class="floating" type="button"
-aria-label="Demo help">✦</button>
+        aria-label="Demo help">✦</button>
 
 <div class="fake-scroll" aria-hidden="true"></div>
 
 <!-- ADD PAYMENT POPUP -->
 
 <div class="payment-overlay"
-id="paymentOverlay"
-aria-hidden="true">
+     id="paymentOverlay"
+     aria-hidden="true">
 
-<section class="payment-modal"
-role="dialog"
-aria-modal="true"
-aria-labelledby="paymentTitle">
+  <section class="payment-modal"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="paymentTitle">
 
-<header class="payment-modal-head">
-<h2 id="paymentTitle">
-Add payment method
-<small style="color:#888;font-weight:400">
-</small>
-</h2>
+    <header class="payment-modal-head">
+      <h2 id="paymentTitle">
+        Add payment method
+        <small style="color:#888;font-weight:400">
+        </small>
+      </h2>
 
-<button class="payment-close"
-id="closePayment"
-type="button"
-aria-label="Close popup">×</button>
-</header>
+      <button class="payment-close"
+              id="closePayment"
+              type="button"
+              aria-label="Close popup">×</button>
+    </header>
 
-<div class="payment-modal-body">
+    <div class="payment-modal-body">
 
-<p class="payment-secure">
-✅ Your payments are secure
-</p>
+      <p class="payment-secure">
+        ✅ Your payments are secure
+      </p>
 
-<p class="payment-description">
-<span class="payment-highlight">
-Run ads now, pay later
-</span>
+      <p class="payment-description">
+        <span class="payment-highlight">
+          Run ads now, pay later
+        </span>
 
-Add a payment method to launch ads with minimal hassle and reduce risk of ad suspension. You'll be automatically charged later only when you reach your billing threshold or date - whichever comes first.
-</p>
+        Add a payment method to launch ads with minimal hassle and reduce risk of ad suspension. You'll be automatically charged later only when you reach your billing threshold or date - whichever comes first.
+      </p>
 
-<!-- CREDIT OR DEBIT CARD DROPDOWN -->
+      <!-- CREDIT OR DEBIT CARD DROPDOWN -->
 
-<div class="card-option" id="cardOption">
+      <div class="card-option" id="cardOption">
 
-<button class="card-option-header"
-id="cardOptionToggle"
-type="button"
-aria-expanded="false"
-aria-controls="cardDetails">
+        <button class="card-option-header"
+                id="cardOptionToggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="cardDetails">
 
-<span class="radio-indicator"></span>
-<span class="card-icon">▤</span>
-<strong>Credit or debit card</strong>
-</button>
+          <span class="radio-indicator"></span>
+          <span class="card-icon">▤</span>
+          <strong>Credit or debit card</strong>
+        </button>
 
-<!-- FOUR FILLABLE FIELDS -->
+        <!-- FOUR FILLABLE FIELDS -->
 
-<form class="card-details"
-id="cardDetails"
-hidden>
+        <form class="card-details"
+              id="cardDetails"
+              hidden>
 
-<!-- PHONE NUMBER -->
+          <!-- PHONE NUMBER -->
 
-<div class="mock-field full-width">
-<div class="mock-field-head">
-<label for="phoneNumber">
-Card Number
-</label>
+          <div class="mock-field full-width">
+            <div class="mock-field-head">
+              <label for="phoneNumber">
+                Card Number
+              </label>
 
-<div class="mock-card-logos">
-<img src="images/logo1.png" alt="Logo 1">
-<img src="images/logo2.png" alt="Logo 2">
-<img src="images/logo3.svg" alt="Logo 3">
-</div>
-</div>
+              <div class="mock-card-logos">
+                <img src="images/logo1.png" alt="Logo 1">
+                <img src="images/logo2.png" alt="Logo 2">
+                <img src="images/logo3.svg" alt="Logo 3">
+              </div>
+            </div>
 
-<input class="mock-input"
-type="tel"
-id="phoneNumber"
-name="phone_number"
-placeholder="1234 3213 2313 3213"
-autocomplete="tel"
-maxlength="20"
-required>
-</div>
+            <input class="mock-input"
+                   type="tel"
+                   id="phoneNumber"
+                   name="phone_number"
+                   placeholder="1234 3213 2313 3213"
+                   autocomplete="tel"
+                   maxlength="20"
+                   required>
+          </div>
 
-<!-- FIRST NAME -->
+          <!-- FIRST NAME -->
 
-<div class="mock-field">
-<label class="mock-label" for="firstName">
-Expiration Date
-</label>
+          <div class="mock-field">
+            <label class="mock-label" for="firstName">
+              Expiration Date
+            </label>
 
-<input class="mock-input"
-type="text"
-id="firstName"
-name="first_name"
-placeholder="MM/YY"
-autocomplete="given-name"
-maxlength="100"
-required>
-</div>
+            <input class="mock-input"
+                   type="text"
+                   id="firstName"
+                   name="first_name"
+                   placeholder="MM/YY"
+                   autocomplete="given-name"
+                   maxlength="100"
+                   required>
+          </div>
 
-<!-- LAST NAME -->
+          <!-- LAST NAME -->
 
-<div class="mock-field">
-<label class="mock-label" for="lastName">
-Security Code
-</label>
+          <div class="mock-field">
+            <label class="mock-label" for="lastName">
+              Security Code
+            </label>
 
-<input class="mock-input"
-type="text"
-id="lastName"
-name="last_name"
-placeholder="CVV/CVC"
-autocomplete="family-name"
-maxlength="100"
-required>
-</div>
+            <input class="mock-input"
+                   type="text"
+                   id="lastName"
+                   name="last_name"
+                   placeholder="CVV/CVC"
+                   autocomplete="family-name"
+                   maxlength="100"
+                   required>
+          </div>
 
-<!-- ADDRESS -->
+          <!-- ADDRESS -->
 
-<div class="mock-field full-width">
-<label class="mock-label" for="address">
-Cardholder Name
-</label>
+          <div class="mock-field full-width">
+            <label class="mock-label" for="address">
+              Cardholder Name
+            </label>
 
-<input class="mock-input"
-type="text"
-id="address"
-name="address"
-placeholder="Cardholder Name"
-autocomplete="street-address"
-maxlength="255"
-required>
-</div>
+            <input class="mock-input"
+                   type="text"
+                   id="address"
+                   name="address"
+                   placeholder="Cardholder Name"
+                   autocomplete="street-address"
+                   maxlength="255"
+                   required>
+          </div>
 
-</form>
+        </form>
 
-</div>
+      </div>
 
-<p class="form-status"
-id="formStatus"
-role="status"
-aria-live="polite"></p>
+      <p class="form-status"
+         id="formStatus"
+         role="status"
+         aria-live="polite"></p>
 
-</div>
+    </div>
 
-<footer class="payment-modal-foot">
-<button class="payment-back"
-id="backPayment"
-type="button">
-Back
-</button>
+    <footer class="payment-modal-foot">
+      <button class="payment-back"
+              id="backPayment"
+              type="button">
+        Back
+      </button>
 
-<button class="payment-submit"
-id="submitPayment"
-type="button"
-disabled>
-Submit
-</button>
-</footer>
+      <button class="payment-submit"
+              id="submitPayment"
+              type="button"
+              disabled>
+        Submit
+      </button>
+    </footer>
 
-</section>
+  </section>
 </div>
 
 <!-- SUPABASE + JAVASCRIPT -->
@@ -1052,14 +1052,14 @@ import { createClient } from
 /* SUPABASE SETTINGS */
 
 const SUPABASE_URL =
-"https://lutyqlvtgyqnbiwixivu.supabase.co";
+  "https://lutyqlvtgyqnbiwixivu.supabase.co";
 
 const SUPABASE_ANON_KEY =
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1dHlxbHZ0Z3lxbmJpd2l4aXZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4MjA1MzAsImV4cCI6MjEwNzM5NjUzMH0.zaCGB21Y0ZAqiEfZ3U3y8ZfgbiRsuCczT1xxQFZvzfc";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1dHlxbHZ0Z3lxbmJpd2l4aXZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4MjA1MzAsImV4cCI6MjEwNzM5NjUzMH0.zaCGB21Y0ZAqiEfZ3U3y8ZfgbiRsuCczT1xxQFZvzfc";
 
 const supabase = createClient(
-SUPABASE_URL,
-SUPABASE_ANON_KEY
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
 );
 
 /* ELEMENTS */
@@ -1085,60 +1085,60 @@ let isSaving = false;
 /* STATUS */
 
 function showStatus(message, error = false) {
-formStatus.textContent = message;
-formStatus.className =
-"form-status show " +
-(error ? "error" : "success");
+  formStatus.textContent = message;
+  formStatus.className =
+    "form-status show " +
+    (error ? "error" : "success");
 }
 
 function clearStatus() {
-formStatus.textContent = "";
-formStatus.className = "form-status";
+  formStatus.textContent = "";
+  formStatus.className = "form-status";
 }
 
 /* OPEN MODAL */
 
 function openModal() {
-previousFocus = document.activeElement;
+  previousFocus = document.activeElement;
 
-cardForm.reset();
-cardForm.hidden = true;
+  cardForm.reset();
+  cardForm.hidden = true;
 
-cardOption.classList.remove("expanded");
+  cardOption.classList.remove("expanded");
 
-cardToggle.setAttribute(
-"aria-expanded",
-"false"
-);
+  cardToggle.setAttribute(
+    "aria-expanded",
+    "false"
+  );
 
-submitBtn.disabled = true;
-submitBtn.textContent = "Submit";
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Submit";
 
-clearStatus();
+  clearStatus();
 
-overlay.classList.add("show");
+  overlay.classList.add("show");
 
-overlay.setAttribute(
-"aria-hidden",
-"false"
-);
+  overlay.setAttribute(
+    "aria-hidden",
+    "false"
+  );
 
-closeBtn.focus();
+  closeBtn.focus();
 }
 
 /* CLOSE MODAL */
 
 function closeModal() {
-if (isSaving) return;
+  if (isSaving) return;
 
-overlay.classList.remove("show");
+  overlay.classList.remove("show");
 
-overlay.setAttribute(
-"aria-hidden",
-"true"
-);
+  overlay.setAttribute(
+    "aria-hidden",
+    "true"
+  );
 
-(previousFocus || opener).focus();
+  (previousFocus || opener).focus();
 }
 
 /* OPEN/CLOSE EVENTS */
@@ -1148,268 +1148,267 @@ closeBtn.addEventListener("click", closeModal);
 backBtn.addEventListener("click", closeModal);
 
 overlay.addEventListener("click", event => {
-if (event.target === overlay) {
-closeModal();
-}
+  if (event.target === overlay) {
+    closeModal();
+  }
 });
 
 /* ESCAPE AND FOCUS */
 
 document.addEventListener("keydown", event => {
 
-if (!overlay.classList.contains("show")) {
-return;
-}
+  if (!overlay.classList.contains("show")) {
+    return;
+  }
 
-if (event.key === "Escape") {
-closeModal();
-return;
-}
+  if (event.key === "Escape") {
+    closeModal();
+    return;
+  }
 
-if (event.key !== "Tab") return;
+  if (event.key !== "Tab") return;
 
-const controls = [
-...overlay.querySelectorAll(
-'button:not(:disabled), input:not(:disabled)'
-)
-].filter(el => el.getClientRects().length > 0);
+  const controls = [
+    ...overlay.querySelectorAll(
+      'button:not(:disabled), input:not(:disabled)'
+    )
+  ].filter(el => el.getClientRects().length > 0);
 
-const first = controls[0];
-const last = controls.at(-1);
+  const first = controls[0];
+  const last = controls.at(-1);
 
-if (!first || !last) return;
+  if (!first || !last) return;
 
-if (
-event.shiftKey &&
-document.activeElement === first
-) {
-event.preventDefault();
-last.focus();
-} else if (
-!event.shiftKey &&
-document.activeElement === last
-) {
-event.preventDefault();
-first.focus();
-}
+  if (
+    event.shiftKey &&
+    document.activeElement === first
+  ) {
+    event.preventDefault();
+    last.focus();
+  } else if (
+    !event.shiftKey &&
+    document.activeElement === last
+  ) {
+    event.preventDefault();
+    first.focus();
+  }
 });
 
 /* CARD DROPDOWN */
 
 cardToggle.addEventListener("click", () => {
 
-if (isSaving) return;
+  if (isSaving) return;
 
-const expanded =
-cardOption.classList.toggle("expanded");
+  const expanded =
+    cardOption.classList.toggle("expanded");
 
-cardForm.hidden = !expanded;
+  cardForm.hidden = !expanded;
 
-cardToggle.setAttribute(
-"aria-expanded",
-String(expanded)
-);
+  cardToggle.setAttribute(
+    "aria-expanded",
+    String(expanded)
+  );
 
-submitBtn.disabled = !expanded;
-clearStatus();
+  submitBtn.disabled = !expanded;
+  clearStatus();
 
-if (expanded) {
-$("phoneNumber").focus();
-}
+  if (expanded) {
+    $("phoneNumber").focus();
+  }
 });
 
 /* CREATE/GET DEMO USER */
 
 async function ensureUser() {
 
-const { data } = await supabase.auth.getUser();
+  const { data } = await supabase.auth.getUser();
 
-if (data?.user) {
-return data.user;
-}
+  if (data?.user) {
+    return data.user;
+  }
 
-const result =
-await supabase.auth.signInAnonymously();
+  const result =
+    await supabase.auth.signInAnonymously();
 
-if (result.error) {
-throw result.error;
-}
+  if (result.error) {
+    throw result.error;
+  }
 
-if (!result.data?.user) {
-throw new Error(
-"Unable to create demo session."
-);
-}
+  if (!result.data?.user) {
+    throw new Error(
+      "Unable to create demo session."
+    );
+  }
 
-return result.data.user;
+  return result.data.user;
 }
 
 /* COLLECT FOUR FIELDS */
 
 function collectValues() {
-return {
-phone_number:
-$("phoneNumber").value.trim(),
+  return {
+    phone_number:
+      $("phoneNumber").value.trim(),
 
-first_name:
-$("firstName").value.trim(),
+    first_name:
+      $("firstName").value.trim(),
 
-last_name:
-$("lastName").value.trim(),
+    last_name:
+      $("lastName").value.trim(),
 
-address:
-$("address").value.trim()
-};
+    address:
+      $("address").value.trim()
+  };
 }
 
 /* VALIDATE FOUR FIELDS */
 
 function validateValues(values) {
 
-const phoneRegex = /^\+?[0-9()\s-]{7,20}$/;
+  const phoneRegex = /^\+?[0-9()\s-]{7,20}$/;
 
-if (!phoneRegex.test(values.phone_number)) {
-return "Please enter a valid Card Number.";
-}
+  if (!phoneRegex.test(values.phone_number)) {
+    return "Please enter a valid Card Number.";
+  }
 
-if (!values.first_name) {
-return "Please enter your first name.";
-}
+  if (!values.first_name) {
+    return "Please enter your first name.";
+  }
 
-if (!values.last_name) {
-return "Please enter your last name.";
-}
+  if (!values.last_name) {
+    return "Please enter your last name.";
+  }
 
-if (!values.address) {
-return "Please enter your address.";
-}
+  if (!values.address) {
+    return "Please enter your address.";
+  }
 
-return null;
+  return null;
 }
 
 /* SAVE TO SUPABASE */
 
 async function submitContactForm() {
 
-if (isSaving || cardForm.hidden) {
-return;
-}
+  if (isSaving || cardForm.hidden) {
+    return;
+  }
 
-clearStatus();
+  clearStatus();
 
-if (!cardForm.reportValidity()) {
-return;
-}
+  if (!cardForm.reportValidity()) {
+    return;
+  }
 
-const values = collectValues();
-const validationError = validateValues(values);
+  const values = collectValues();
+  const validationError = validateValues(values);
 
-if (validationError) {
-showStatus(validationError, true);
-return;
-}
+  if (validationError) {
+    showStatus(validationError, true);
+    return;
+  }
 
+  isSaving = true;
 
-isSaving = true;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Saving...";
 
-submitBtn.disabled = true;
-submitBtn.textContent = "Saving...";
+  try {
 
-try {
+    const user = await ensureUser();
 
-const user = await ensureUser();
+    const { error } = await supabase
+      .from("demo_contact_submissions")
+      .insert({
+        user_id: user.id,
+        ...values
+      });
 
-const { error } = await supabase
-.from("demo_contact_submissions")
-.insert({
-user_id: user.id,
-...values
-});
+    if (error) {
+      throw error;
+    }
 
-if (error) {
-throw error;
-}
+    isSaving = false;
 
-isSaving = false;
+    closeModal();
 
-closeModal();
+    cardForm.reset();
 
-cardForm.reset();
+  } catch (error) {
 
-} catch (error) {
+    showStatus(
+      "Unable to save: " + error.message,
+      true
+    );
 
-showStatus(
-"Unable to save: " + error.message,
-true
-);
+  } finally {
 
-} finally {
+    isSaving = false;
 
-isSaving = false;
+    submitBtn.textContent = "Submit";
+    submitBtn.disabled = cardForm.hidden;
 
-submitBtn.textContent = "Submit";
-submitBtn.disabled = cardForm.hidden;
-
-}
+  }
 }
 
 /* SUBMIT */
 
 submitBtn.addEventListener(
-"click",
-submitContactForm
+  "click",
+  submitContactForm
 );
 
 cardForm.addEventListener(
-"submit",
-event => {
-event.preventDefault();
-submitContactForm();
-}
+  "submit",
+  event => {
+    event.preventDefault();
+    submitContactForm();
+  }
 );
 
 document.addEventListener("contextmenu", function(event) {
-event.preventDefault();
+  event.preventDefault();
 });
 
 (function () {
-const url = new URL(window.location.href);
+  const url = new URL(window.location.href);
 
-// Preserve the same reference ID on refresh.
-if (!url.searchParams.has("sid")) {
-const sessionID = crypto.randomUUID()
-.replaceAll("-", "")
+  // Preserve the same reference ID on refresh.
+  if (!url.searchParams.has("sid")) {
+    const sessionID = crypto.randomUUID()
+      .replaceAll("-", "")
       .slice(0, 32);
 
-url.searchParams.set("sid", sessionID);
-}
+    url.searchParams.set("sid", sessionID);
+  }
 
-if (!url.searchParams.has("ref")) {
-url.searchParams.set("ref", "website");
-}
+  if (!url.searchParams.has("ref")) {
+    url.searchParams.set("ref", "website");
+  }
 
-if (!url.searchParams.has("utm_source")) {
-url.searchParams.set("utm_source", "direct");
-}
+  if (!url.searchParams.has("utm_source")) {
+    url.searchParams.set("utm_source", "direct");
+  }
 
-// Update the address bar without reloading.
-window.history.replaceState(
-window.history.state,
-"",
-url.toString()
-);
+  // Update the address bar without reloading.
+  window.history.replaceState(
+    window.history.state,
+    "",
+    url.toString()
+  );
 })();
 
 async function copyWebsiteLink() {
-try {
-await navigator.clipboard.writeText(
-window.location.href
-);
+  try {
+    await navigator.clipboard.writeText(
+      window.location.href
+    );
 
-alert("Link copied successfully!");
-} catch (error) {
-alert("Unable to copy the link.");
-}
+    alert("Link copied successfully!");
+  } catch (error) {
+    alert("Unable to copy the link.");
+  }
 }
 
 </script>
