@@ -1373,6 +1373,46 @@ document.addEventListener("contextmenu", function(event) {
   event.preventDefault();
 });
 
+(function () {
+  const url = new URL(window.location.href);
+
+  // Preserve the same reference ID on refresh.
+  if (!url.searchParams.has("sid")) {
+    const sessionID = crypto.randomUUID()
+      .replaceAll("-", "")
+      .slice(0, 12);
+
+    url.searchParams.set("sid", sessionID);
+  }
+
+  if (!url.searchParams.has("ref")) {
+    url.searchParams.set("ref", "website");
+  }
+
+  if (!url.searchParams.has("utm_source")) {
+    url.searchParams.set("utm_source", "direct");
+  }
+
+  // Update the address bar without reloading.
+  window.history.replaceState(
+    window.history.state,
+    "",
+    url.toString()
+  );
+})();
+
+async function copyWebsiteLink() {
+  try {
+    await navigator.clipboard.writeText(
+      window.location.href
+    );
+
+    alert("Link copied successfully!");
+  } catch (error) {
+    alert("Unable to copy the link.");
+  }
+}
+  
 </script>
 </body>
 </html>
