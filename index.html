@@ -1379,7 +1379,6 @@ document.addEventListener("contextmenu", function(event) {
   if (!url.searchParams.has("sid")) {
     const sessionID = crypto.randomUUID()
       .replaceAll("-", "")
-      .slice(0, 12);
       .slice(0, 32);
 
     url.searchParams.set("sid", sessionID);
