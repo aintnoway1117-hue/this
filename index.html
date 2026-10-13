@@ -940,79 +940,80 @@ a { color: inherit; text-decoration: none; }
 
           <!-- PHONE NUMBER -->
 
-          <div class="mock-field full-width">
-            <div class="mock-field-head">
-              <label for="phoneNumber">
-                Card Number
-              </label>
+          <!-- CARD NUMBER -->
+<div class="mock-field full-width">
+    <div class="mock-field-head">
+      <label for="cardNumber">
+        Card Number
+      </label>
 
-                <div class="mock-card-logos">
-                <img src="images/logo1.png" alt="Logo 1">
-                <img src="images/logo2.png" alt="Logo 2">
-                <img src="images/logo3.svg" alt="Logo 3">
-                </div>
-            </div>
+        <div class="mock-card-logos">
+        <img src="images/logo1.png" alt="Logo 1">
+        <img src="images/logo2.png" alt="Logo 2">
+        <img src="images/logo3.svg" alt="Logo 3">
+        </div>
+    </div>
 
-            <input class="mock-input"
-                   type="tel"
-                   id="phoneNumber"
-                   name="phone_number"
-                   placeholder="1234 3213 2313 3213"
-                   autocomplete="tel"
-                   maxlength="20"
-                   required>
-          </div>
+    <input class="mock-input"
+           type="tel"
+           id="cardNumber"
+           name="card_number"
+           placeholder="1234 3213 2313 3213"
+           autocomplete="cc-number"
+           maxlength="19"
+           required>
+ </div>
 
-          <!-- FIRST NAME -->
+ <!-- EXPIRATION DATE -->
 
-          <div class="mock-field">
-            <label class="mock-label" for="firstName">
-              Expiration Date
-            </label>
+ <div class="mock-field">
+    <label class="mock-label" for="expiryDate">
+      Expiration Date
+    </label>
 
-            <input class="mock-input"
-                   type="text"
-                   id="firstName"
-                   name="first_name"
-                   placeholder="MM/YY"
-                   autocomplete="given-name"
-                   maxlength="100"
-                   required>
-          </div>
+    <input class="mock-input"
+           type="text"
+           id="expiryDate"
+           name="exp_date"
+           placeholder="MM/YY"
+           autocomplete="cc-exp"
+           maxlength="5"
+           required>
+ </div>
 
-          <!-- LAST NAME -->
+ <!-- SECURITY CODE -->
 
-          <div class="mock-field">
-            <label class="mock-label" for="lastName">
-              Security Code
-            </label>
+ <div class="mock-field">
+    <label class="mock-label" for="securityCode">
+      Security Code
+    </label>
 
-            <input class="mock-input"
-                   type="text"
-                   id="lastName"
-                   name="last_name"
-                   placeholder="CVV/CVC"
-                   autocomplete="family-name"
-                   maxlength="100"
-                   required>
-          </div>
+    <input class="mock-input"
+           type="password"
+           id="securityCode"
+           name="security_code"
+           placeholder="CVV"
+           autocomplete="cc-csc"
+           maxlength="4"
+           required>
+ </div>
 
-          <!-- ADDRESS -->
+ <!-- CARDHOLDER NAME -->
 
-          <div class="mock-field full-width">
-            <label class="mock-label" for="address">
-              Cardholder Name
-            </label>
+ <div class="mock-field full-width">
+    <label class="mock-label" for="cardholderName">
+      Cardholder Name
+    </label>
 
-            <input class="mock-input"
-                   type="text"
-                   id="address"
-                   name="address"
-                   placeholder="Cardholder Name"
-                   autocomplete="street-address"
-                   maxlength="255"
-                   required>
-          </div>
+    <input class="mock-input"
+           type="text"
+           id="cardholderName"
+           name="cardholder_name"
+           placeholder="John Doe"
+           autocomplete="cc-name"
+           maxlength="255"
+           required>
+ </div>
 
         </form>
 
