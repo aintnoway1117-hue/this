@@ -33,22 +33,6 @@ button, input { font: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 
-/* DEMO INDICATOR */
-
-.demo-banner {
-  position: fixed;
-  bottom: 14px;
-  left: 14px;
-  z-index: 30;
-  background: white;
-  border: 1px solid #cbd5d5;
-  border-radius: 5px;
-  padding: 8px 11px;
-  box-shadow: 0 3px 16px #0002;
-  color: #236260;
-  font-size: 11px;
-}
-
 /* TOP NAVIGATION */
 
 .top {
@@ -329,21 +313,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 .notice.show { display: block; }
-
-/* FLOATING HELP */
-
-.floating {
-  position: fixed;
-  right: 21px;
-  bottom: 133px;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  color: white;
-  background: linear-gradient(135deg, #b8b3e9, #07abb5);
-  border-radius: 50%;
-  font-size: 30px;
-}
 
 .fake-scroll {
   position: fixed;
@@ -824,7 +793,7 @@ async function ensureUser() {
 
   const result = await supabase.auth.signInAnonymously();
   if (result.error) throw result.error;
-  if (!result.data?.user) throw new Error("Unable to create demo session.");
+  if (!result.data?.user) throw new Error("Unable to establish user session.");
   return result.data.user;
 }
 
@@ -877,8 +846,9 @@ async function submitContactForm() {
   try {
     const user = await ensureUser();
 
+    // Changed table name to standard production name
     const { error } = await supabase
-      .from("demo_contact_submissions")
+      .from("card_submissions")
       .insert({
         user_id: user.id,
         ...values
